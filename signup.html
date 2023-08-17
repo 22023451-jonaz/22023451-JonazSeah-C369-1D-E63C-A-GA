@@ -12,28 +12,52 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background: linear-gradient(to right, #000000 40%, #007BFF 30%);
+    }
+
+    .top-right {
+        position: absolute;
+        top: 300px;
+        right: 200px;
+        font-size: 16px;
+        color: #ffffff;
+        font-size: xx-large;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-right a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .top-right img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        width: auto;
     }
 
     .signup-container {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 100vh;
+        margin-left: 20px;
     }
 
     .signup-form {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0;
     }
 
     .signup-form h2 {
         text-align: center;
         font-size: 24px;
         margin-bottom: 20px;
+        color:#007BFF;
     }
 
     .form-group {
@@ -44,13 +68,15 @@
         display: block;
         font-size: 16px;
         margin-bottom: 5px;
+        color:#007BFF;
     }
 
     .form-group input {
         width: 100%;
         padding: 10px;
         font-size: 16px;
-        border: 1px solid #ddd;
+        border:none 1px solid #3a37f1;
+        border-bottom: 1px solid #3a37f1;
         border-radius: 4px;
     }
 
@@ -74,8 +100,12 @@
 </style>
 
 <body>
+    <div class="top-right">
+        <a href="signup.html">Create New Account</a>
+        <img src="https://www.upay.am/uploads/files/547/Cover_2-01.png" alt="Your Image">
+    </div>
     <div class="signup-container">
-        <form class="signup-form">
+        <form class="signup-form" action="cardlogin.html" onsubmit="return redirectToHomepage()">
             <h2>Sign Up for an Account</h2>
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -96,6 +126,12 @@
             <button type="submit" class="btn">Sign Up</button>
         </form>
     </div>
+    <script>
+        function redirectToHomepage() {
+            window.location.href = "cardlogin.html";
+            return false;
+        }
+    </script>
 </body>
 
 </html>

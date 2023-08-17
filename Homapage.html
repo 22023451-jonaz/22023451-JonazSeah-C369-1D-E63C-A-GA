@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    
-    <title>Online Banking</title>
+
+    <title>UPAY Banking</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -17,6 +17,30 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+    }
+
+    .button-container {
+
+        display: flex;
+        justify-content: space-between;
+        margin: 0 250px;
+        align-items: center;
+    }
+
+    .button {
+        text-align: center;
+        padding: 10px 10px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+
+    .button img {
+        max-width: 100px;
+        display: block;
+        margin: 0 auto 10px;
     }
 
     header {
@@ -101,16 +125,29 @@
 <body>
     <header>
         <div class="container">
-            <h1>Online Banking</h1>
+            <h1>UPAY Banking</h1>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
-                <h2>Welcome to our Online Banking</h2>
+                <h2>Welcome to UPAY Banking</h2>
                 <p>Manage your finances securely and conveniently from anywhere.</p>
-                <a href="login.html" class="btn">Login</a>
+                <div class="button-container">
+                    <div class="button">
+
+                        <img src="https://www.forbes.com/advisor/wp-content/uploads/2022/09/Image_-_MSP_.jpeg.jpg"
+                            alt="Services">
+                        <a class="button" href="services.html">Services</a>
+                    </div>
+                    <div class="button">
+
+                        <img src="https://www.clio.com/wp-content/uploads/2022/11/Illustration_Blog_Lawyer-Payment-Methods.png"
+                            alt="Payment">
+                        <a class="button" href="makepayment.html">Payment</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -137,7 +174,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Online Banking. All rights reserved.</p>
+            <p>&copy; 2023 UPAY Banking. All rights reserved.</p>
         </div>
     </footer>
 </body>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login with Card Information</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -12,29 +11,21 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-    }
-
-    .login-container {
+        background-color: #f5f5f5;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
 
-    .login-form {
-        background-color: #f9f9f9;
+    .login-container {
+        background-color: #ffffff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        
-        margin: 0 auto;
-    }
-
-    .login-form h2 {
+        max-width: 400px;
+        width: 100%;
         text-align: center;
-        font-size: 24px;
-        margin-bottom: 20px;
     }
 
     .form-group {
@@ -55,15 +46,6 @@
         border-radius: 4px;
     }
 
-    .form-group.checkbox {
-        display: flex;
-        align-items: center;
-    }
-
-    .form-group.checkbox label {
-        margin-bottom: 0; 
-    }
-
     .btn {
         display: block;
         width: 100%;
@@ -81,44 +63,25 @@
     .btn:hover {
         background-color: #0056b3;
     }
-
-    .forgot-password {
-        flex: 1;
-        text-align: right;
-        margin-top: 10px;
-    }
-
-    .forgot-password a {
-        color: #007BFF;
-        text-decoration: none;
-    }
-
-    .forgot-password a:hover {
-        text-decoration: underline;
-    }
 </style>
-
 <body>
     <div class="login-container">
-        <form class="login-form"action="Homapage.html" onsubmit="return redirectToHomepage()">
-            <h2>Login to Your Account</h2>
+        <form class="signup-form" action="Homapage.html" onsubmit="return redirectToHomepage()">
+        <h2>Login</h2>
+        <form>
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="expiration">Expiration Date:</label>
+                <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
             </div>
-            <div class="form-group checkbox">
-                <label>
-                    <input type="checkbox" name="remember"> Remember Password
-                </label>
-                <div class="forgot-password">
-                    <a href="forgotpassword.html" target="_blank">Forgot Password?</a>
-                </div>
+            <div class="form-group">
+                <label for="cvc">CVC:</label>
+                <input type="password" id="cvc" name="cvc" placeholder="Enter CVC" required>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn">Log In</button>
         </form>
     </div>
     <script>
@@ -128,5 +91,4 @@
         }
     </script>
 </body>
-
 </html>
